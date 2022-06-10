@@ -8,9 +8,10 @@ Visualise recursion call flow, debugging a function
 Following recursive control flow can be difficult to follow, to see the order in which sub calls are made easily, to see how long each subcall takes, analyse performance.
 
 ## Description: 
-* Use (static/dynamic?) program analysis to visualise the control flow of a recursive function.
+* Use dynamic (maybe static as well if we have time) program analysis to visualise the control flow of a recursive function.
 * For dynamic analysis, take user’s code and parameters to the function, and dynamically generate the call stack.
 * Depending on the analyses we want to do, we may have to make some trade-offs with any static analysis (ex. Maybe we want our analysis to always terminate even in an infinite recursive call)
+* For visual representation, use React components to generate a tree like structure of recursive calls including the parameters and other valuable information for each call
 
 ## Implementation Language: 
 * Backend: Java (Spring)

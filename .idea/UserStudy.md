@@ -21,8 +21,9 @@ To conduct our *final user study*,
 //
 
 
-## Visualisation of Analysis
-![Alt text](images/Prototype.jpg?raw=true "Title")
+## Visualisation of Analysis:
+
+
 
 
 ##Code Tasks:

@@ -23,7 +23,7 @@ To conduct our *final user study*,
 
 ## Visualisation of Analysis:
 
-
+![User Study 1](images/Prototype.PNG?raw=true "User Study 1")
 
 
 ##Code Tasks:

@@ -1,0 +1,28 @@
+.FillHeight {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.CallNodeTree {
+  background-color: #f9fef7;
+  width: 100%;
+}
+
+.CallNodeViewer {
+  color: white;
+  text-align: start;
+  padding: 16px;
+}
+
+.CallNodeStack {
+  background-color: #f9fef7;
+}
+
+.CallNode {
+  background-color: darkgrey;
+}
+
+.CardTitle {
+  margin: 0;
+  text-align: center;
+}

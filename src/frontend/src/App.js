@@ -1,11 +1,10 @@
-import './App.css';
+import Main from "./Main";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        PROJECT 2
-      </header>
+    <div className="App" style={{ height: 800 }}>
+      <Main />
     </div>
   );
 }

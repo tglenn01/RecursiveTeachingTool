@@ -20,8 +20,8 @@ Following recursive control flow can be difficult to follow, to see the order in
 * Frontend: JS (React)
 
 ## Responsibilities:
-* Frontend : David / Matt
+* Frontend : Eric
 * Analysis Function : Trevor
-* AST framework : Ronit
-* Case Studies : Eric
+* AST framework : David
+* Case Studies : Ronit
 * Video : Matt

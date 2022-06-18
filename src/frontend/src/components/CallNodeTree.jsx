@@ -14,7 +14,7 @@ const parseCallTree = (call) => {
   };
 };
 
-const CallNodeTree = () => {
+const CallNodeTree = ({ title }) => {
   const context = useContext(CallsContext);
   const [currentWidth, setCurrentWidth] = useState(0);
   const divRef = useRef(null);
@@ -37,7 +37,7 @@ const CallNodeTree = () => {
   return (
     // `<Tree />` will fill width/height of its container; in this case `#treeWrapper`.
     <div className="CallNodeTree FillHeight" ref={divRef}>
-      <h2 className="CardTitle">Call Tree</h2>
+      <h2 className="CardTitle">{title}</h2>
       <Tree
         data={parseCallTree(context.callTree)}
         translate={{ x: currentWidth / 2, y: 50 }}

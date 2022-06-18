@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CallsContext from "./contexts/CallsContext";
 import { CallNodeStack, CallNodeTree, CallNodeViewer } from "./components";
-import { Layout } from "antd";
-import { RightCircleTwoTone } from "@ant-design/icons";
+import { Layout, Button } from "antd";
+import { RightCircleTwoTone, UploadOutlined } from "@ant-design/icons";
 import "./Main.css";
 
 const { Header, Content, Sider } = Layout;
@@ -97,6 +97,8 @@ const callArray = [
 ];
 
 const Main = () => {
+  const fileInputRef = useRef(null);
+  const [file, setFile] = useState(null);
   const [selectedCall, setSelectedCall] = useState(null);
   const [viewerSidebarCollapsed, setViewerSidebarCollapsed] = useState(true);
 
@@ -117,7 +119,7 @@ const Main = () => {
       }}
     >
       <Layout className="Main">
-        <Header>header</Header>
+        {/* <Header>header</Header> */}
         <Layout>
           <Sider
             collapsedWidth={40}
@@ -138,13 +140,33 @@ const Main = () => {
           </Sider>
           <Content>
             <div className="Tree">
-              <CallNodeTree />
+              {file ? (
+                <CallNodeTree title={file.name} />
+              ) : (
+                <div className="FileInputContainer">
+                  <Button
+                    type="primary"
+                    shape="round"
+                    icon={<UploadOutlined />}
+                    onClick={() => fileInputRef.current.click()}
+                  >
+                    Upload (.java) file
+                  </Button>
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept=".java"
+                    className="Hidden"
+                    onChange={(e) => {
+                      setFile(fileInputRef.current.files[0]);
+                    }}
+                  />
+                </div>
+              )}
             </div>
           </Content>
           <Sider width="20%">
-            <div className="Stack">
-              <CallNodeStack />
-            </div>
+            <div className="Stack">{file && <CallNodeStack />}</div>
           </Sider>
         </Layout>
       </Layout>

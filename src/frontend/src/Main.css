@@ -25,3 +25,13 @@
   top: 50%;
   right: -40px;
 }
+
+.Hidden {
+  display: none;
+}
+
+.FileInputContainer {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+}

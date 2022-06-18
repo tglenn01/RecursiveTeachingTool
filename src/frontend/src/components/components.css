@@ -4,22 +4,20 @@
 }
 
 .CallNodeTree {
-  background-color: #f9fef7;
+  padding: 16px;
   width: 100%;
 }
 
 .CallNodeViewer {
-  color: white;
-  text-align: start;
   padding: 16px;
 }
 
 .CallNodeStack {
-  background-color: #f9fef7;
+  padding: 16px;
 }
 
-.CallNode {
-  background-color: darkgrey;
+.CallNodePath {
+  stroke: white !important;
 }
 
 .CardTitle {

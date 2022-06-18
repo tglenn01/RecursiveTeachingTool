@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState, useRef } from "react";
+import { ArrowDownOutlined } from "@ant-design/icons";
 import Tree from "react-d3-tree";
 import CallsContext from "../contexts/CallsContext";
 import CallNode from "./CallNode";
@@ -31,7 +32,7 @@ const CallNodeStack = () => {
   };
 
   const handleRenderNode = (node) => {
-    return <CallNode node={node} />;
+    return <CallNode node={node} showCallId={true} />;
   };
 
   useEffect(() => {
@@ -44,6 +45,9 @@ const CallNodeStack = () => {
   return (
     <div className="CallNodeStack FillHeight" ref={divRef}>
       <h2 className="CardTitle">Call Stack</h2>
+
+      <ArrowDownOutlined style={{ fontSize: "110%" }} />
+
       <Tree
         data={parseCallStack(context.callArray)}
         translate={{ x: currentWidth / 2, y: 50 }}
@@ -56,6 +60,7 @@ const CallNodeStack = () => {
         collapsible={false}
         zoomable={false}
         hasInteractiveNodes={true}
+        pathClassFunc={() => "CallNodePath"}
       />
     </div>
   );

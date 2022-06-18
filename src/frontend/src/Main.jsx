@@ -7,6 +7,8 @@ import "./Main.css";
 
 const { Header, Content, Sider } = Layout;
 
+const SELECTED_COLOR_HEX = "#1F1135";
+
 // Dummy data... transfer data from backend here into similar format
 const callTree = {
   id: 1,
@@ -111,7 +113,7 @@ const Main = () => {
         callArray,
         selectedCall,
         setSelectedCall,
-        selectedNodeColor: "#167C80",
+        selectedNodeColor: SELECTED_COLOR_HEX,
       }}
     >
       <Layout className="Main">
@@ -129,7 +131,7 @@ const Main = () => {
                 className="SidebarTrigger"
                 style={{ fontSize: "250%" }}
                 onClick={() => setViewerSidebarCollapsed((prev) => !prev)}
-                twoToneColor="#12162d"
+                twoToneColor={SELECTED_COLOR_HEX}
                 rotate={viewerSidebarCollapsed ? 0 : 180}
               />
             </div>
@@ -139,7 +141,7 @@ const Main = () => {
               <CallNodeTree />
             </div>
           </Content>
-          <Sider>
+          <Sider width="20%">
             <div className="Stack">
               <CallNodeStack />
             </div>

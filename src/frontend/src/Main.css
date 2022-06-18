@@ -4,29 +4,19 @@
   height: 100%;
 }
 
-.Tree {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  flex-basis: 100%;
-  height: 100%;
-  border-right: 1px solid lightgrey;
-  border-bottom: 1px solid lightgrey;
-}
-
-.Info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-basis: 50%;
-  height: 100%;
-}
-
 .Viewer {
   /* background-color: #167c80; */
-  background-color: #12162d;
+  background-color: #1f1135;
+  height: 100%;
+}
+
+.Tree {
+  background-color: #343950;
+  height: 100%;
+}
+
+.Stack {
+  background-color: #37505e;
   height: 100%;
 }
 
@@ -34,10 +24,4 @@
   position: absolute;
   top: 50%;
   right: -40px;
-}
-
-.Stack {
-  flex-basis: 50%;
-  border-bottom: 1px solid lightgrey;
-  height: 100%;
 }

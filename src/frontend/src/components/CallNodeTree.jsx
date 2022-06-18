@@ -24,7 +24,7 @@ const CallNodeTree = () => {
   };
 
   const handleRenderNode = (node) => {
-    return <CallNode node={node} />;
+    return <CallNode node={node} showArgs={true} />;
   };
 
   useEffect(() => {
@@ -47,6 +47,7 @@ const CallNodeTree = () => {
         renderCustomNodeElement={handleRenderNode}
         onNodeClick={handleNodeClick}
         collapsible={false}
+        pathClassFunc={() => "CallNodePath"}
       />
     </div>
   );

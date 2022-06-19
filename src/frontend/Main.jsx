@@ -118,7 +118,7 @@ const Main = () => {
         selectedNodeColor: SELECTED_COLOR_HEX,
       }}
     >
-      <Layout className="backend.Main">
+      <Layout className="Main">
         {/* <Header>header</Header> */}
         <Layout>
           <Sider

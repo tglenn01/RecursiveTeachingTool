@@ -3,7 +3,7 @@ import CallsContext from "./contexts/CallsContext";
 import { CallNodeStack, CallNodeTree, CallNodeViewer } from "./components";
 import { Layout, Button } from "antd";
 import { RightCircleTwoTone, UploadOutlined } from "@ant-design/icons";
-import "Main.css";
+import "./Main.css";
 
 const { Header, Content, Sider } = Layout;
 
@@ -173,4 +173,4 @@ const Main = () => {
     </CallsContext.Provider>
   );
 };
-export default backend.Main;
+export default Main;
